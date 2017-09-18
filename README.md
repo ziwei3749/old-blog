@@ -4,8 +4,8 @@
 
 ### Node.js
 
-- [node.js异步漫谈]('./node/node.md')
-- [node.js异步漫谈]('/blog/node/node.md')
+- [node.js异步漫谈](node/node.md)
+- [node.js异步漫谈](/node/node.md)
 
 ### Vue
 
