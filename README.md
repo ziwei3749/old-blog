@@ -1,12 +1,17 @@
-# blog
+# blog 
 
-## 技术blog分类
+## 分类
+- [JavaScript-目录](JavaScript/directory.md)
+- [Vue.js-目录](vue/directory.md)
+- [Node.js-目录](node/directory.md)
 
-### Node.js
-
-- [Node.js学习前的一大波【自我提问】](node/node01.md)
-
-### Vue
+## 推荐
 
 
-### 前端构建工具(Webpack/Gulp)
+
+
+
+
+
+
+

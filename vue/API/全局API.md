@@ -225,3 +225,69 @@ var MyComponent = Vue.component('my-component')
 这个api存在的意义跟Vue.set()相同,都是为了避开Vue不能检测属性被删除的限制
 
 但是既然已经是响应式的了,Vue就可以检测到这个属性,不太清楚这个api的使用场景。文档只是说这个api不常用
+
+
+### 2017/11/30 今天学习 Vue.component() Vue.use()  Vue.mixin()
+
+1. Vue.component() 就是注册全局组件,或者获取全局组件
+
+如何注册呢? 看例子,一般是要跟Vue.extend()配合使用
+```
+<div id="app">
+    <haha></haha>
+</div>
+
+
+Vue.component('haha', Vue.extend({
+    template: '<div>我是哈哈组件</div>'
+}))
+
+new Vue({
+    el: '#app'
+})
+
+```
+
+2. Vue.use() 
+
+使用插件。 Vue的插件必须有install方法。
+
+如果这个插件是一个对象,那这个对象必须有install方法,如果是一个函数,就直接把这个把这个函数当做install方法
+
+install方法将作为Vue的参数调用
+
+
+```
+import vue-router from 'vue-router'
+
+Vue.use('vue-router')
+
+
+```
+
+3. Vue.mixin()
+
+全局注册混合对象,需要谨慎使用,一旦注册,将会对之后创建的所有 Vue对象造成影响
+
+如例:
+```
+
+Vue.mixin({
+    mounted(){
+        console.log('haha')
+    }
+
+})
+
+new Vue({
+    el : '#app'
+})
+
+这个之后创建的所欲的Vue对象,在moutned()钩子里,都会打印console.log('haha')
+
+```
+
+
+注意区分Vue.mixin 和 在Vue.prototype上添加属性、方法
+
+https://segmentfault.com/q/1010000008554425/a-1020000008556804
