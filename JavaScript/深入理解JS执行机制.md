@@ -75,7 +75,7 @@ process1 删除了该dom,而process2 编辑了该dom,同时下达2个矛盾的�
 
 所以,这里我们首先知道了JS里的一种分类方式,就是将任务分为: 同步任务和异步任务
 
-![事件循环1](./eventloop1.png)
+![事件循环1](./eventloop2.png)
 
 按照这种分类方式:JS的执行机制是
 
@@ -141,7 +141,7 @@ new Promise 是同步任务,被放到主进程里,直接执行打印 console.log
  - macro-task(宏任务)：包括整体代码script，setTimeout，setInterval
  - micro-task(微任务)：Promise，process.nextTick
 
-![事件循环2](./eventloop2.png)
+![事件循环2](./eventloop.png)
 
 按照这种分类方式:JS的执行机制是
 
@@ -175,6 +175,19 @@ new Promise 是同步任务,被放到主进程里,直接执行打印 console.log
 
 
 ###  <a name= "4">4. 谈谈setTimeout</a>
+
+这段setTimeout代码什么意思? 我们一般说: 3秒后,会执行setTimeout里的那个函数
+
 ```
-    
+ setTimeout(function(){
+    console.log('执行了')
+ },3000)    
 ```
+
+
+但是这种说并不严谨,准确的解释是: 3秒后,setTimeout里的函数被会推入event queue,而event queue(事件队列)里的任务,只有在主线程空闲时才会执行。
+
+***所以只有满足 (1)3秒后 (2)主线程空闲,同时满足时,才会3秒后执行该函数***
+
+如果主线程执行内容很多,执行时间超过3秒,比如执行了10秒,那么这个函数只能10秒后执行了
+
