@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sum(x, y, z) {
+        return [x, y, z]
+    }
+
+    //    柯里化sum
+    function sumC(x) {
+        return function (y) {
+            return function (z) {
+                return sum(x, y, z)
+            }
+        }
+    }
+//
+//    //    console.log(sumC(1)(3)(6));
+//    var arr = []
+//    function curry(fn) {
+//        // 判断有几个参数
+//        console.log(fn.length);
+//        for (var i = 0; i < fn.length; i++) {
+//            return function (p1) {
+//
+//            }
+//        }
+//        return function (p1) {
+//            return function (p2) {
+//                return fn(p1, p2)
+//            }
+//        }
+//    }
+//
+//    curry(sum)
+
+
+    function curry(fn,fixedParmas) {
+        if(!Array.isArray(fixedParmas)){ fixedParmas = []}
+        return function (newParmas) {
+            newParmas = Array.prototype.slice.call(arguments)
+            if(newParmas.length + fixedParmas.length < fn.length){
+                return curry(fn,fixedParmas.concat(newParmas))
+            }else{
+                return fn.apply(undefined,fixedParmas.concat(newParmas))
+            }
+        }
+    }
+
+    var curriedSum = curry(sum)
+    console.log(curriedSum(1,4)(4));
+</script>
+</body>
+</html>
