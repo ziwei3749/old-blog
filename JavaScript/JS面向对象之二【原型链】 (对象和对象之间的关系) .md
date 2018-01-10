@@ -102,6 +102,26 @@ JS另外开辟了一个内存空间,用来专门存储数组的共有方法和�
 
 
 
+### 最后回答文章最初的2个问题:
+
+问题1: array funciton obj 都是对象,那么为什么说他们都是对象,通过什么关联起来的?
+
+他们就是通过__proto__关联的。
+Array.prototype.__proto__ 继承了 Object.prototype
+Function.prototype.__proto__ 继承了 Object.prototype
+
+他们同根同源,都继承自Object.prototype,数组只是比普通的对象多了一些方法,所以他们都是对象呗
+
+![内存图](./neicun2.png)
+
+问题2: 为什么一个空对象,"自带"toString()方法?
+
+因为所有对象都自带__proto__属性,这个属性指向Object.prototype这个内存空间。
+
+因为Object.prototype存储着有toString(),所以所有对象都有。
+
+
+
 
 
 
