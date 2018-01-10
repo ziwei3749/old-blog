@@ -90,7 +90,7 @@ var arr = []
 ```
 我们为了实现数组有push方法,但是不能让所有的对象都有push方法,为了实现这个需求,JS是这样设计的。
 
-![内存图](./neicun.png)
+![内存图1](./neicun.png)
 
 JS另外开辟了一个内存空间,用来专门存储数组的共有方法和属性。你可以用过window.Array.prototype来访问它
 
@@ -112,7 +112,7 @@ Function.prototype.__proto__ 继承了 Object.prototype
 
 他们同根同源,都继承自Object.prototype,数组只是比普通的对象多了一些方法,所以他们都是对象呗
 
-![内存图](./neicun2.png)
+![内存图2](./neikun2.png)
 
 问题2: 为什么一个空对象,"自带"toString()方法?
 
