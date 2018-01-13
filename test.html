@@ -21,41 +21,85 @@
             }
         }
     }
-//
-//    //    console.log(sumC(1)(3)(6));
-//    var arr = []
-//    function curry(fn) {
-//        // 判断有几个参数
-//        console.log(fn.length);
-//        for (var i = 0; i < fn.length; i++) {
-//            return function (p1) {
-//
-//            }
-//        }
-//        return function (p1) {
-//            return function (p2) {
-//                return fn(p1, p2)
-//            }
-//        }
-//    }
-//
-//    curry(sum)
+    //
+    //    //    console.log(sumC(1)(3)(6));
+    //    var arr = []
+    //    function curry(fn) {
+    //        // 判断有几个参数
+    //        console.log(fn.length);
+    //        for (var i = 0; i < fn.length; i++) {
+    //            return function (p1) {
+    //
+    //            }
+    //        }
+    //        return function (p1) {
+    //            return function (p2) {
+    //                return fn(p1, p2)
+    //            }
+    //        }
+    //    }
+    //
+    //    curry(sum)
 
 
-    function curry(fn,fixedParmas) {
-        if(!Array.isArray(fixedParmas)){ fixedParmas = []}
+    function curry(fn, fixedParmas) {
+        if (!Array.isArray(fixedParmas)) {
+            fixedParmas = []
+        }
         return function (newParmas) {
             newParmas = Array.prototype.slice.call(arguments)
-            if(newParmas.length + fixedParmas.length < fn.length){
-                return curry(fn,fixedParmas.concat(newParmas))
-            }else{
-                return fn.apply(undefined,fixedParmas.concat(newParmas))
+            if (newParmas.length + fixedParmas.length < fn.length) {
+                return curry(fn, fixedParmas.concat(newParmas))
+            } else {
+                return fn.apply(undefined, fixedParmas.concat(newParmas))
             }
         }
     }
 
     var curriedSum = curry(sum)
-    console.log(curriedSum(1,4)(4));
+//    console.log(curriedSum(1, 4)(4));
+
+
+//    data: {
+//        array_3d: [
+//            {
+//                "id": 32,//数据id,可作为隐藏域
+//                "username": "18519021198",
+//                "create_time": 201510161740,//数据名称
+//                "type": "1"
+//            },
+//            {
+//                "id": 32,//数据id,可作为隐藏域
+//                "username": "18519021198",
+//                "create_time": 201510161740,//数据名称
+//                "type": "1"
+//            },
+//        ]
+//        total: '4'
+//    }
+
+
+    var data = {
+        0 :  {"id": 32, "create_time": 201510161740, "type": "1"},
+        1 :  {"id": 32, "create_time": 201510161740, "type": "1"},
+        2 :  {"id": 32, "create_time": 201510161740, "type": "1"},
+        total : 4
+    }
+
+    var arr = []
+
+    for(var key in data){
+        if(key != 'total'){
+            arr.push(data[key])
+        }
+    }
+
+    var data2 = {
+        arr_3d: arr,
+        total : data.total
+    }
+    console.log(data2);
+
 </script>
 </body>
 </html>
