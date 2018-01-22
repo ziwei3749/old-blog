@@ -1,4 +1,68 @@
-# 典型问题
+# 前端进阶面试题汇总
+
+
+### JS核心基础(ES6之前)
+
+- 原型/继承
+
+- this
+
+- call/apply/bind三种的区别
+
+- new做了什么
+
+- 作用域
+
+- 变量声明提升
+
+***这里如果面试官问到2，3，4，5，6中的一点，你能够把2，3，4，5，6整理到一起，串联起来进行统一的回答效果极佳***
+
+### JS核心基础(ES6)
+
+### CSS相关
+
+- 左边定宽，右边自适应方案：float + margin，float + calc
+
+- 左右两边定宽，中间自适应：float，float + calc, 圣杯布局（设置BFC，margin负值法），flex
+
+- 左右居中
+
+- 上下垂直居中：
+
+- 盒模型：content（元素内容） + padding（内边距） + border（边框） + margin（外边距）
+
+- BFC、IFC、GFC、FFC：FC（Formatting Contexts），格式化上下文
+
+### 框架相关
+
+- 双向数据绑定原理
+
+Object.defineProperty（vue）：劫持数据的 getter 和 setter
+
+脏值检测（angularjs）：通过特定事件进行轮循
+
+发布/订阅模式：通过消息发布并将消息进行订阅
+
+- VDOM：三个 part，
+ 
+- vue 和 react 区别
+
+### 网络基础类
+
+- 跨域
+
+- http 无状态无连接
+  
+- http-cache：就是 http 缓存咯
+
+- cookie 和 session
+  
+- 安全问题，如 XSS 和 CSRF
+
+
+
+
+### 典型通用问题
 
 - [1.哪个项目最让你满意,或者能代表你最高水平,如何做的?](#1)
 - [2.让你印象最深刻的技术难点?最后如何解决的,有什么心得?](#2)
