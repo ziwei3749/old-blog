@@ -13,6 +13,8 @@
 - [JS面向对象之三【this】(对象和函数之间的关系)](JavaScript/JS面向对象之三【this】(对象和函数之间的关系).md)
 - [JS面向对象之四【new】(创建特定对象的语法糖)](JavaScript/JS面向对象之四【new】(创建特定对象的语法糖).md)
 - [JS面向对象之五【继承】.md](JavaScript/JS面向对象之五【继承】.md)
+- [代码易读性优化.md](JavaScript/代码优化.md)
+- [一篇文章搞清楚JS的浅拷贝和深拷贝.md](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
 
 
 
