@@ -15,6 +15,7 @@
 - [JS面向对象之五【继承】.md](JavaScript/JS面向对象之五【继承】.md)
 - [代码易读性优化.md](JavaScript/代码优化.md)
 - [一篇文章搞清楚JS的浅拷贝和深拷贝.md](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
+- [DOM事件模型.md](JavaScript/DOM事件模型.md)
 
 
 ## CSS
