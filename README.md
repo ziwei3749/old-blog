@@ -26,7 +26,7 @@
 ## Webpack3.x+学习笔记
 
 - [webpack的配置和插件.md](webpack/webpack的配置和插件.md)
-- [webpack常见loader和plugins的使用和坑.md](webpack/webpack常见loader和plugins的使用和坑.md)
+- [webpack常见loader和plugins的使用和坑.md](webpack/webpack常见loader和plugins使用和坑.md)
 
 
 
