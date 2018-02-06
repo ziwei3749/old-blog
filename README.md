@@ -28,6 +28,8 @@
 - [webpack的配置和插件.md](webpack/webpack的配置和插件.md)
 - [webpack常见loader和plugins的使用和坑.md](webpack/webpack常见loader和plugins使用和坑.md)
 
+## Vue
 
+- [对MVVM和双向数据绑定的一些粗浅理解.md](vue/对MVVM和双向数据绑定的一些粗浅理解.md)
 
 
