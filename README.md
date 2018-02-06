@@ -31,5 +31,7 @@
 ## Vue
 
 - [对MVVM和双向数据绑定的一些粗浅理解.md](vue/对MVVM和双向数据绑定的一些粗浅理解.md)
+- [我用过的4种Vue组件通信方式.md](vue/我用过的4种Vue组件通信方式.md)
+- [vue-router实践记录.md](vue/vue-router实践记录.md)
 
 
