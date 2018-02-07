@@ -1,4 +1,4 @@
-# vue-resource实践记录
+# vue-resource和axios实践记录
 
 Vue-resource是一个异步请求插件
 
@@ -83,3 +83,43 @@ Vue.http.options.root = 'http://192.168.2.74:81/api'
     }
 
 ```
+
+## axios和vue-resource的对比
+
+目前vue-resource已经停止更新,比较流行的是vue-axios,它也是基于axios的,这里我对axios和vue-resource做了一些对比
+
+首先他们的api是十分类似的,
+
+比如都提供了7、8种发起请求的方式,主要区别是axios没有jsonp的请求方式
+比如他们两者传递请求参数,获取响应的数据都是用response.data,这些也都是几乎一致的
+
+需要注意的不同
+
+- axios是暴露在window下的对象,并没有帮你挂在到vue实例上
+- axios的全局拦截器的使用api的不太一样
+- axios和vue-resource的使用95%都是类似的,但是存在一点区别
+
+
+1.我们可以自己把axios挂在到vue实例上,也就是Vue构造函数的prototype上,或者引用vue-axios可能更规范。
+2.全局拦截器的写法
+
+```
+           axios.interceptors.request.use((config) => {
+                console.log('请求之前,可以做loading处理');
+                return config
+            })
+
+            axios.interceptors.response.use((response) => {
+                console.log('response init');
+                return response
+            })
+```
+
+
+
+
+
+
+
+
+
