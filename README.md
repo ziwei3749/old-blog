@@ -33,12 +33,13 @@
 
 - [对MVVM和双向数据绑定的一些粗浅理解.md](vue/对MVVM和双向数据绑定的一些粗浅理解.md)
 - [我用过的4种Vue组件通信方式.md](vue/我用过的4种Vue组件通信方式.md)
-- [vue-router实践记录.md](vue/vue-router实践记录.md)
-- [vue-resource和axios实践记录.md](vue/vue-resource实践记录.md)
+- [vue-router实践小记.md](vue/vue-router实践记录.md)
+- [vue-resource和axios实践小记.md](vue/vue-resource实践记录.md)
+- [vue-lazyload懒加载实践小记.md](vue/vue-lazyload懒加载实践小记.md)
 
 ## Node
 
-- [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
+- [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记.md](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
 
 
 
