@@ -22,7 +22,8 @@
 ## CSS
 
 - [三栏、两栏自适应布局的5种解决方案对比.md](CSS/页面布局.md)
-- [4种水平垂直居中的实现(宽高不定).md](CSS/水平垂直居中的4种方案{宽高不固定).md)
+- [4种水平垂直居中的实现(宽高不定).md](CSS/水平垂直居中的4种方案(宽高不固定).md)
+- [全面掌握盒模型的BFC渲染机制.md](CSS/全面掌握盒模型的BFC渲染机制.md)
 
 ## Webpack3.x+学习笔记
 
@@ -40,6 +41,7 @@
 ## Node
 
 - [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记.md](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
+- [在阿里云Linux下配置Node.js环境.md](node/在阿里云Linux下配置Node.js环境.md)
 
 
 
