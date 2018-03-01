@@ -43,5 +43,9 @@
 - [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记.md](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
 - [在阿里云Linux下配置Node.js环境.md](node/在阿里云Linux下配置Node.js环境.md)
 
+## Segmentfault社区 
+
+- https://segmentfault.com/u/ziwei3749
+
 
 
