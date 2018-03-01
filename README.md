@@ -1,4 +1,4 @@
-# blog 
+# blog推荐
 
 ## 分类
 - [JavaScript-目录](JavaScript/directory.md)
