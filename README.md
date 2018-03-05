@@ -12,37 +12,37 @@
 - [JS面向对象之二【原型链】(对象和对象之间的关系)](JavaScript/JS面向对象之二【原型链】(对象和对象之间的关系).md)
 - [JS面向对象之三【this】(对象和函数之间的关系)](JavaScript/JS面向对象之三【this】(对象和函数之间的关系).md)
 - [JS面向对象之四【new】(创建特定对象的语法糖)](JavaScript/JS面向对象之四【new】(创建特定对象的语法糖).md)
-- [JS面向对象之五【继承】.md](JavaScript/JS面向对象之五【继承】.md)
-- [代码易读性优化.md](JavaScript/代码优化.md)
-- [一篇文章搞清楚JS的浅拷贝和深拷贝.md](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
-- [DOM事件模型.md](JavaScript/DOM事件模型.md)
-- [彻底搞懂ES6里的...运算符.md](JavaScript/彻底搞懂ES6里的...运算符.md)
-- [移动端适配原理和4个细节.md](big plan/移动端适配.md)
+- [JS面向对象之五【继承】](JavaScript/JS面向对象之五【继承】.md)
+- [代码易读性优化](JavaScript/代码优化.md)
+- [一篇文章搞清楚JS的浅拷贝和深拷贝](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
+- [DOM事件模型](JavaScript/DOM事件模型.md)
+- [彻底搞懂ES6里的...运算符](JavaScript/彻底搞懂ES6里的...运算符.md)
+- [移动端适配原理和4个细节](other/移动端适配.md)
 
 
 ## CSS
 
-- [三栏、两栏自适应布局的5种解决方案对比.md](CSS/页面布局.md)
-- [水平垂直居中的4种方案(宽高不固定).md](CSS/水平垂直居中的4种方案(宽高不固定).md)
-- [全面掌握盒模型的BFC渲染机制.md](CSS/全面掌握盒模型的BFC渲染机制.md)
+- [三栏、两栏自适应布局的5种解决方案对比](CSS/页面布局.md)
+- [水平垂直居中的4种方案(宽高不固定)](CSS/水平垂直居中的4种方案(宽高不固定).md)
+- [全面掌握盒模型的BFC渲染机制](CSS/全面掌握盒模型的BFC渲染机制.md)
 
 ## Webpack3.x+学习笔记
 
-- [webpack的配置和插件.md](webpack/webpack的配置和插件.md)
-- [webpack常见loader和plugins的使用和坑.md](webpack/webpack常见loader和plugins使用和坑.md)
+- [webpack的配置和插件](webpack/webpack的配置和插件.md)
+- [webpack常见loader和plugins的使用和坑](webpack/webpack常见loader和plugins使用和坑.md)
 
 ## Vue
 
-- [对MVVM和双向数据绑定的一些粗浅理解.md](vue/对MVVM和双向数据绑定的一些粗浅理解.md)
-- [我用过的4种Vue组件通信方式.md](vue/我用过的4种Vue组件通信方式.md)
-- [vue-router实践小记.md](vue/vue-router实践记录.md)
-- [vue-resource和axios实践小记.md](vue/vue-resource实践记录.md)
-- [vue-lazyload懒加载实践小记.md](vue/vue-lazyload懒加载实践小记.md)
+- [对MVVM和双向数据绑定的一些粗浅理解](vue/对MVVM和双向数据绑定的一些粗浅理解.md)
+- [我用过的4种Vue组件通信方式](vue/我用过的4种Vue组件通信方式.md)
+- [vue-router实践小记](vue/vue-router实践记录.md)
+- [vue-resource和axios实践小记](vue/vue-resource实践记录.md)
+- [vue-lazyload懒加载实践小记](vue/vue-lazyload懒加载实践小记.md)
 
 ## Node
 
-- [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记.md](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
-- [在阿里云Linux下配置Node.js环境.md](node/在阿里云Linux下配置Node.js环境.md)
+- [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
+- [在阿里云Linux下配置Node.js环境](node/在阿里云Linux下配置Node.js环境.md)
 
 ## Segmentfault社区 
 
