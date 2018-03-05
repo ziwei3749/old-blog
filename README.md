@@ -17,6 +17,7 @@
 - [一篇文章搞清楚JS的浅拷贝和深拷贝.md](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
 - [DOM事件模型.md](JavaScript/DOM事件模型.md)
 - [彻底搞懂ES6里的...运算符.md](JavaScript/彻底搞懂ES6里的...运算符.md)
+- [移动端适配原理和4个细节.md](big plan/移动端适配.md)
 
 
 ## CSS
