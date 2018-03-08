@@ -13,7 +13,6 @@
 - [JS面向对象之三【this】(对象和函数之间的关系)](JavaScript/JS面向对象之三【this】(对象和函数之间的关系).md)
 - [JS面向对象之四【new】(创建特定对象的语法糖)](JavaScript/JS面向对象之四【new】(创建特定对象的语法糖).md)
 - [JS面向对象之五【继承】](JavaScript/JS面向对象之五【继承】.md)
-- [代码易读性优化](JavaScript/代码优化.md)
 - [一篇文章搞清楚JS的浅拷贝和深拷贝](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
 - [DOM事件模型](JavaScript/DOM事件模型.md)
 - [彻底搞懂ES6里的...运算符](JavaScript/彻底搞懂ES6里的...运算符.md)
@@ -43,6 +42,10 @@
 
 - [vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑小记](node/vue-cli升级后没有dev-server.js如何做mock模拟数据踩坑记录.md)
 - [在阿里云Linux下配置Node.js环境](node/在阿里云Linux下配置Node.js环境.md)
+
+## 其他
+- [代码易读性优化](JavaScript/代码优化.md)
+- [系统地掌握前端性能优化原理和实践](other/系统地掌握前端性能优化原理和实践.md)
 
 ## Segmentfault社区 
 
