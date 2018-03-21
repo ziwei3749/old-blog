@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function getSum(arr,n,sum){
+        if(sum == 0 && n == 0){
+            return true;
+        }else if(n <= 0){
+            return false;
+        }
+        if(n > 0)
+            for(var i = 0; i < arr.length; i++){
+                var temp = arr.slice(i+1,arr.length);
+                return getSum(temp,n-1,sum-arr[i]) || getSum(temp,n,sum);
+            }
+    }
+
+    var arr = [1,2,4]
+    var n = 2
+    var sum = 3
+    console.log(getSum(arr, n, sum));
+</script>
+</body>
+</html>

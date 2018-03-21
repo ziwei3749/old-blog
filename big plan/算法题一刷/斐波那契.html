@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//    斐波那契数列。   你传入一个n,请出第n项的值是多少?  规律就是前两项之和等于第三项
+//【1,1,2,3,5,8,13】
+    function fbnq(n) {
+        if(n==1 || n==2){
+            return 1
+        }else{
+            return fbnq(n-1) + fbnq(n-2)
+        }
+    }
+
+console.log(fbnq(7));
+</script>
+</body>
+</html>

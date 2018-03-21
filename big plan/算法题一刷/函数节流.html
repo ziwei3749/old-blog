@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input id="search" type="text" name="search">
+<script>
+    function queryData(text){
+        console.log("搜索：" + text);
+    }
+    var input = document.getElementById("search");
+    input.addEventListener("keyup", function(event){
+        throttle(queryData, null, 500, this.value);
+//         queryData(event);
+    });
+
+    function throttle(fn,context,delay,text){
+        clearTimeout(fn.timeoutId);
+        fn.timeoutId = setTimeout(function(){
+            fn.call(context,text);
+        },delay);
+    }
+</script>
+</body>
+</html>

@@ -142,3 +142,106 @@ xhr.onload = function(){
 - Window.postMessage
 - WebSocket
 - CORS
+
+
+> 什么是跨域?
+ 
+ 跨域比较常见的场景就是:
+  - 当你发起ajax请求时,你请求的url和你当前页面的url非同域时,请求可以发出,也可以得到数据,但是浏览器拒绝把这个数据给你。
+  - 当你页面里用了iframe标签,iframe里的url和你当前页面非同域,浏览器拒绝你对ifarme下页面去做JS操作或者DOM操作
+  
+  
+  对于场景1: 可以用JSONP或者CORS来跨过浏览器的限制
+  对于场景2: 如果你2个页面有相同的1级域名,可以通过降域的方式;或者如果没有相同1级域名,可以用postMessage
+  
+JSONP 怎么写
+  
+  
+  JSONP : 前端就是利用src去向服务器请求资源。定义好函数做什么逻辑。 后端就是把要返回的数据包裹到回调函数里调用,返回这个函数给前端
+  
+  前端
+  
+  ```
+  <script src='index.php?callback=getBookList&page=1></script>
+  
+  <script>
+    getBookList(listData){
+       //  拿到数据去做操作listData
+    }
+  </script>
+  
+  ```
+  
+  后端就是,把数据返回放到这个函数里,然后把返回给前端。
+  
+  ```
+  getBookList(listData)
+  
+  ```
+  
+ 
+ 
+ 
+ 
+ AJAX只能不能跨域对吧?
+ 所以AJAX能去发起请求的原理也是JSONP把?
+ 如果也是依赖的JSONP,那为什么JSONP只能请求get,但是ajax请求可以请求很多类型呢?
+ 
+ JQ是通过 一个隐藏的iframe来做post提交
+ 
+>  关于JSONP的面试题
+ 
+ 1.JSONP的核心原理,就是利用script标签的src属性可以去请求资源,不受浏览器同源策略限制。
+ 2.JSONP的写法。前端就是请求资源 + 定义函数做什么事情。 后端可以通过network看一下后端返回就是一个回调函数的调用,把应该返回的参数到放到函数参数里了。
+ 3.JSONP的一些认识
+ 
+ ```
+ (1) JSONP只能请求get请求,无法做post请求的跨域
+ (2) AJAX本身是受浏览器同源策略限制的。通过服务器代理也可以跨域
+ (3) jQ的ajax是对JSONP的进一步封装,JQ的ajax可以发起post请求,它原理大概是,用一个隐藏的iframe来做post提交
+ 
+ ```
+ 
+ > 关于CORS的面试题
+ 
+ fetch API
+ 
+ 1. 它好像是IE10一下可能是有问题。
+ 2. CORS的需要浏览器和服务器都支持。浏览器ajax请求是,带一个Origin字段。服务器需要设置access-control-allow-origin: xxx
+ 3. 关于CORS的一些其他认识
+ 
+ ```
+ 
+ CORS请求分简单请求和非简单请求。对于非简单请求会有预检测。 (简单请求至少是get/post/head请求,对于字段、以及字段的内容有一些固定要求。)
+ 
+ 对于非简单请求,会有一个请求类型是Option的一个预请求。如果没问题,就发送真正的请求、做数据交互。
+ 
+ 这个预检测。主要作用有2个: 1个是对于服务器数据可能造成副作用的请求,需要先检测一下。 2预检测去查看cookie/token的提示。
+ 
+ 
+
+ 这种请求服务器还,有其他设置,大概4个设置
+ ```
+ 
+ > 关于hash
+ 
+一个页面中嵌套了Iframe。
+
+请求B页面的资源,请求时url附带上hash
+
+在B页面,通过onhashchange去监听,has改变了,就触发这个回调嘛。在回调里你通过window.localtion.hash可以得到hash字符串,从而实现通信。
+
+
+> postmessage
+
+```
+onmessage事件监听,event.data得到数据
+```
+> websocket
+```
+创建webscoket实例
+```
+
+ 
+ 
+ 

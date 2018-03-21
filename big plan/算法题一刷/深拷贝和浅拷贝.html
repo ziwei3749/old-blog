@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /**
+     *  深拷贝和浅拷贝的区别。如果你要考虑的是复杂数据类型,对象里面还嵌套着对象。那如果你把里面也拷贝了就是深拷贝,拷贝不了就是浅拷贝
+     */
+
+//    var obj = {
+//        a: 1,
+//        b: 2,
+//        c: {
+//            name: 'zz',
+//            age : 18
+//        }
+//    }
+//
+//    var obj2 = {}
+//
+//    for(var k in obj){
+//        obj2[k] = obj[k]
+//    }
+//
+//    console.log(obj2);
+
+
+
+//    深拷贝
+    var obj = {
+        a: 1,
+        b: 2,
+        c: {
+            name: 'zz',
+            age: 18
+        }
+    }
+
+
+    function deepCopy(obj) {
+        var obj2
+        if(!(obj instanceof Object)){
+            return obj
+        }else{
+            if(obj instanceof Array){
+                obj2 = []
+            }else if(obj instanceof Object){
+                obj2 = {}
+            }else if(obj instanceof Function){
+                obj2 = eval(obj.toString())
+            }
+        }
+
+        for(var k in obj){
+            obj2[k] = deepCopy(obj[k])
+        }
+        return obj2
+    }
+
+    var obj2 = deepCopy(obj)
+
+
+
+
+</script>
+</body>
+</html>

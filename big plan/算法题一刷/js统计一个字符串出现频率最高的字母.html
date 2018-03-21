@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let str = 'asdf ghjklaqwertyuiopiaia';
+
+    var obj = {}
+
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] in obj) {
+            obj[str[i]]++
+        }else{
+            obj[str[i]] = 1
+        }
+    }
+
+    var maxKey = str[0]
+    var maxVal = obj[maxKey]
+
+    for(var k in obj){
+        if(maxVal < obj[k]){
+            maxKey = k
+            maxVal = obj[k]
+        }
+    }
+
+    console.log(maxKey,maxVal);
+
+
+</script>
+</body>
+</html>

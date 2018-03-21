@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /**
+     *  把2个数组里重复的元素,从某一个数组里去掉
+     */
+    //    var arr =  [1,2,3,4,5,6,7];
+    //    var arr2 = [2,3,4,5,6]
+    //
+    //    // 把 arr 和 arr2里重复的元素,从arr中去掉
+    //    var newArr = []
+    //    arr.forEach((item) => {
+    //        if(arr2.indexOf(item) == -1){
+    //            newArr.push(item)
+    //        }
+    //    })
+    //
+    //    console.log(newArr);
+
+    /**
+     *  去掉一个数组里重复的元素
+     */
+    //    var arr = [1, 2, 3, 4, 5, 5, 5, 5, 1, 1]
+    //    var newArr = Array.from(new Set(arr))
+    //    console.log(newArr);
+    /**
+     *  去掉一个数组里重复的元素
+     */
+    //    var arr = [1, 2, 3, 4, 5, 5, 5, 5, 1, 1]
+    //    var newArr = []
+    //
+    //    arr.forEach((item) => {
+    //        if(newArr.indexOf(item) == -1){
+    //            newArr.push(item)
+    //        }
+    //    })
+    //
+    //    console.log(newArr);
+
+    /**
+     *   求出这个数组里哪一个元素出现的次数最多,出现了多少次   /  第二多的是哪个元素?出现了多少次
+     */
+
+    var arr = [1, 2, 3, 4, 5, 5, 5, 5, 1, 1]
+    var mapObj = {}
+
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] in mapObj) {
+            mapObj[arr[i]]++
+        } else {
+            mapObj[arr[i]] = 1
+        }
+    }
+
+    console.log(mapObj);
+
+    var maxKey = 1;
+    var maxValue = arr[0];
+    for (var k in mapObj) {
+        if (mapObj[k] > mapObj[maxKey]) {
+            maxKey = k
+        }
+    }
+    console.log(maxKey);
+    maxValue = mapObj[maxKey]
+    console.log(maxValue);
+</script>
+</body>
+</html>

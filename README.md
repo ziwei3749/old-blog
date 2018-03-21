@@ -16,7 +16,9 @@
 - [一篇文章搞清楚JS的浅拷贝和深拷贝](JavaScript/一篇文章彻底搞清JS的浅拷贝and深拷贝.md)
 - [DOM事件模型](JavaScript/DOM事件模型.md)
 - [彻底搞懂ES6里的...运算符](JavaScript/彻底搞懂ES6里的...运算符.md)
+- [JS模块化](JavaScript/JS模块化.md)
 - [移动端适配原理和4个细节](other/移动端适配.md)
+
 
 
 ## CSS
@@ -46,6 +48,9 @@
 ## 其他
 - [代码易读性优化](JavaScript/代码优化.md)
 - [系统地掌握前端性能优化原理和实践](other/系统地掌握前端性能优化原理和实践.md)
+- [web安全的XSS和CSRF](other/web安全的XSS和CSRF.md)
+- [HTTP和HTTPS](other/HTTP和HTTPS.md)
+
 
 ## Segmentfault社区 
 
