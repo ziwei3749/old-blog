@@ -26,7 +26,9 @@
             }
         })
 
-        return [...left,midPosValue,...right]
+        return sort(left).concat(midPosValue).concat(sort(right))
+
+
     }
 
     console.log(sort(arr));
